@@ -24,16 +24,17 @@ function mostrarMenu(){
 //Funcion para agregar una tarea
 function agregarTarea(){
     let nombre = prompt("Ingresa el nombre de la tarea");
-    if(nombre ) {
-        let tarea={
+    if(nombre){
+       let tarea={
             nombre:nombre,
             completada: false
-        };
-        tareas.push(tarea);
-        alert("Tarea Agregada de forma correcta");
+       };
+       tareas.push(tarea);
+       alert("Tarea Agregada de forma correcta"); 
 
-    } else {
-        alert("El nombre de la tarea no puede estar vacio");
+    }else{
+        alert("El nombre de la tarea no puede estar vacio.");
+
     }
 
 }
@@ -45,12 +46,28 @@ function verTareas(){
     }else {
         let mensaje = "Lista de tareas\n";
         tareas.forEach((tarea,index)=> {
-            mensaje+=`${index+1}.-${tarea.nombre} [${tarea.completada? "Completada":"Pendiente"}] \n `;    
+            mensaje+=`${index+1}.-${tarea.nombre} [${tarea.completada? "Completada":"Pendiente"}] \n `; //If sintactico   
         });
         alert(mensaje);
 
     }
 }
+
+//Funcion para marcar tarea completada
+function  marcarTareaCompletada(){
+ 
+    let numero = parseInt(prompt("Introduce el numero de la tarea a completar: "));
+    if( numero > 0 &&  numero <= tareas.length){
+        tareas[numero-1].completada = true;
+        alert(` La tarea "${tareas[numero-1].nombre}" ha sido marcada como completada`);
+    }else{
+        alert("Numero no valido");
+    }
+
+}
+
+
+
 
 //Funcion para manejar el flujo del programa
 function iniciarPrograma(){
