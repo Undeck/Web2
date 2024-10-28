@@ -1,0 +1,13 @@
+body {
+ background-color: #ded6b9;   
+ font-family: fantasy;
+ color: rgb(23, 131, 9);
+ margin: 20;
+ padding: 30;
+}
+
+h1 {
+    color:rgb(105, 12, 125) ;
+    text-align: center;
+    font-size: 250%;
+}
