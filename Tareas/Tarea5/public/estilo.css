@@ -1,0 +1,28 @@
+.calculadora{
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid blue;
+    border-radius: 5px;
+    background-color: greenyellow;
+
+}
+
+#pantalla {
+    width: 260px; 
+    height: 50px; 
+    margin: 10px;
+    font-size: 24px;
+    text-align: right;
+    border-radius: 5px;
+}
+
+/*Se usa input button para solo afectar a los obejtos de tipo boton*/
+input[type="button"]{
+    width: 60px;
+    height: 60px;
+    margin: 5px; 
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;    /* Modifica el cursos al pasar sobre los botones */
+}
+
